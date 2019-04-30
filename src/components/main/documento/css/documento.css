@@ -1,0 +1,11 @@
+table tr, table td {
+    border: 0px !important;
+}
+
+tr:hover {
+    background: #ccc;
+}
+
+td {
+    padding-top: 10px;
+}

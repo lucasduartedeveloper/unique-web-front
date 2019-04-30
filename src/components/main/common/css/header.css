@@ -1,0 +1,33 @@
+.profile-picture {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #1d994c;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 34px;
+}
+
+.navbar.horizontal-layout .nav-bottom .page-navigation {
+  -webkit-justify-content: initial;
+  justify-content: initial;
+}
+
+.navbar.horizontal-layout .nav-bottom .page-navigation .nav-item {
+  margin-right: 20px;
+}
+
+.navbar.horizontal-layout .nav-top {
+  background: #201E31;
+}
+
+@media (min-width: 1400px) {
+  .content-wrapper {
+    max-width: 1320px;
+  }
+  .container {
+    max-width: 1320px;
+  }
+}

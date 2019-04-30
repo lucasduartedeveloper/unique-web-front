@@ -1,0 +1,36 @@
+.login-logo-container img {
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.auth.theme-one .auto-form-wrapper {
+  box-shadow: 0 -25px 37.7px 11.3px rgba(255, 255, 255, 0.1);
+}
+
+.full-page-wrapper {
+  background: #201E31;
+}
+
+.auto-form-wrapper {
+  background: #F0F0F0 !important;
+  border-radius: 0px !important;
+}
+
+.btn, .form-control, .input-group-text {
+  border-radius: 0px !important;
+}
+
+.btn-primary {
+  background: #201E31;
+  border-color: #201E31;
+}
+
+.btn-primary:hover {
+  background: #161427;
+  border-color: #161427;
+}
+
+.btn-primary:focus {
+  background: #161427 !important;
+  border-color: #161427 !important;
+}
