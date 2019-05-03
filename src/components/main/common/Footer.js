@@ -9,7 +9,7 @@ class Footer extends Component {
     }
 
     return (
-      <footer className="footer">
+      <footer style={{ zIndex: "9999"}} className="footer">
         <div className="w-100 clearfix">
           <span className="float-none d-block mt-1 mt-sm-0 text-center">
             Copyright © 2019{" "}
@@ -20,6 +20,7 @@ class Footer extends Component {
             >
               Londrisoft
             </a>
+            .{" "}Todos os direitos reservados.
           </span>
         </div>
       </footer>

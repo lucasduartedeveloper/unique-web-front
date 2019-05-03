@@ -85,7 +85,7 @@ class ResetarSenha extends Component {
                 >
                   Cancelar
                 </button>
-                <button type="submit" className="btn btn-success">
+                <button type="submit" className="btn btn-primary">
                   Pronto
                 </button>
               </div>

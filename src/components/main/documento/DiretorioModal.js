@@ -39,21 +39,19 @@ class DiretorioModal extends Component {
             </button>
             </div>
             <div className="modal-body">
-            <div className="form-group">
-                <label htmlFor="recipient-name" className="col-form-label">
-                Nome:
-                </label>
-                <input
-                id="email-esqueceu-senha"
-                type="text"
-                className="form-control"
-                autoComplete="off"
-                name="diretorio"
-                spellCheck="false"
-                onChange={this.handleChange}
-                value={this.state.diretorio}
-                />
-            </div>
+                <div className="form-group">
+                    <input
+                    id="email-esqueceu-senha"
+                    type="text"
+                    className="form-control"
+                    autoComplete="off"
+                    name="diretorio"
+                    spellCheck="false"
+                    onChange={this.handleChange}
+                    value={this.state.diretorio}
+                    />
+                </div>
+                <p style={{ color: "#D94A38" }}>** Pastas sem documentos são excluídas automáticamente.</p>
             </div>
             <div className="modal-footer">
             <button
@@ -66,7 +64,7 @@ class DiretorioModal extends Component {
             <button 
                 type="button"
                 onClick={() => { this.props.onCriarDiretorio(this.state.diretorio); }} 
-                className="btn btn-success"
+                className="btn btn-primary"
                 data-dismiss="modal">
                 Pronto
             </button>

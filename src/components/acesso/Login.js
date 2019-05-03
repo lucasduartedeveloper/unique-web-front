@@ -11,29 +11,28 @@ class Login extends Component {
   render() {
     return (
       <div className="container-scroller">
+      <div className="wave"></div>
         <div className="container-fluid page-body-wrapper full-page-wrapper">
-          <div className="content-wrapper d-flex align-items-center auth auth-bg-1 theme-one">
+          <div className="content-wrapper d-flex auth auth-bg-1 theme-one">
             <div className="row w-100 mx-auto">
               <div className="col-lg-4 mx-auto">
-                <div className="login-logo-container">
+                <div className="login-logo-container logo-escritorio">
                   <img src="/images/login-logo.png" alt="" />
                 </div>
                 <div className="auto-form-wrapper">
                   <LoginForm />
                   <div className="text-block text-center my-3">
                     <span
-                      //data-toggle="modal"
-                      //data-target="#esqueceu-senha-modal"
-                      onClick={() => {UI.alert(false, "Opção desativada.")}}
+                      onClick={() => { UI.toggleModal("#esqueceu-senha-modal") }}
                       className="text-small forgot-password link"
                     >
                       Esqueci minha senha
                     </span>
                   </div>
                 </div>
-                <p className="footer-text text-center">
-                  Copyright © 2019 Londrisoft. Todos os direitos reservados.
-                </p>
+              <div className="login-logo-container logo-londrisoft">
+                <img src="/images/logo-londrisoft.png" alt="" />
+              </div>
               </div>
             </div>
           </div>

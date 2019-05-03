@@ -18419,7 +18419,7 @@
   }
   
   .page-body-wrapper {
-    background: #ccc;
+    background: #eee;
     padding-left: 0;
     padding-right: 0;
   }
@@ -28557,21 +28557,19 @@ table td {
 }
 
 /* botão e menu de opções */
-
 .btn-option {
-  background: #fff;
-  color: #aaa;
-  font-size: 16px !important;
-  border: 1px solid #999;
-  padding: 5px !important;
+  background: #818181;
+  color: #fff;
+  font-size: 22px !important;
+  border: none;
+  padding: 6px 8px !important;
   border-radius: 50%;
   margin: 2px !important;
 }
 
 .btn-option:hover {
-  background: #ddd !important;
-  border: 1px solid #777;
-  color: #444;
+  background: #07263B !important;
+  border: none;
 }
 
 .btn-option:active {
@@ -28598,12 +28596,37 @@ table td {
   color: #444;
 }
 
+/* Menu padrão */
 .dropdown-menu {
-  border: 1px solid #999 !important;
+  background: #254459 !important;
+  border-radius: 5px 5px 5px 5px !important;
+  border: 0px solid #999 !important;
+  box-shadow: 5px 5px 10px 1px #777;
+}
+
+.dropdown-item {
+  color: #fff;
 }
 
 .dropdown-item:hover {
-  background: #ddd;
+  background: #07263B;
+  color: #fff;
+}
+
+/* Menu usuário */
+.dropdown-menu.navbar-dropdown {
+  background: rgb(123,120,186) !important;
+  border-radius: 00px 0px 10px 10px !important;
+  top: 45px !important;
+}
+
+.navbar-dropdown .dropdown-item {
+  color: #fff;
+}
+
+.navbar-dropdown .dropdown-item:hover {
+  background: rgb(103,100,166);
+  color: #fff;
 }
 
 table.table-layout td {
@@ -28622,4 +28645,8 @@ table.table-layout td {
 
 .btn-icons:hover {
   color: #fff;
+}
+
+.card {
+  background-color: #fff !important;
 }

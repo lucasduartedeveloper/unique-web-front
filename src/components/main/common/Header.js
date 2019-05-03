@@ -3,7 +3,6 @@ import { Link, withRouter } from "react-router-dom";
 
 import "./css/header.css";
 import API from "../../../services/api";
-import UI from "../../../services/interface";
 import StringUtil from "../../../services/util/string";
 
 class Header extends Component {
@@ -25,8 +24,8 @@ class Header extends Component {
     let menuStyle = {
       paddingTop: "5px",
       paddingBottom: "5px",
-      border: "1px solid #999",
-      cursor: "pointer"
+      cursor: "pointer",
+      background: "#07263b !important"
     }
 
     let selectEmpresa = {
@@ -75,7 +74,7 @@ class Header extends Component {
                 type="button"
                 data-toggle="minimize"
               >
-                <span className="icon-menu text-light" />
+                <i className="icon-menu text-light" />
               </button>
             </div>
           </div>
@@ -92,7 +91,7 @@ class Header extends Component {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/folha/funcionario/cadastro" className="nav-link">
+                <Link to="/inicio" className="nav-link">
                   <i className="link-icon icon-grid" />
                   <span className="menu-title">Folha</span>
                   <i className="menu-arrow" />
@@ -100,13 +99,28 @@ class Header extends Component {
                 <div className="submenu">
                   <ul className="submenu-item">
                     <li className="nav-item">
-                      <Link className="nav-link" to="/folha/funcionario/cadastro">
-                        Cadastrar Funcionário
+                      <Link className="nav-link" to="/folha/funcionario/novo">
+                        Novo Funcionário
                       </Link>
                     </li>
                     <li className="nav-item">
                       <Link className="nav-link" to="/folha/funcionario/pesquisa">
                         Pesquisar Funcionário
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/folha/lancamentos">
+                        Lançamentos
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/folha/ferias">
+                        Solicitação de Férias
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/folha/rescisao">
+                        Solicitação de Rescisão
                       </Link>
                     </li>
                   </ul>
@@ -128,7 +142,7 @@ class Header extends Component {
             >
               { API.empresas && API.empresas.map(function(emp) {
                 return (
-                  <option value={emp.id}>{ StringUtil.mask(emp.cnpj,"99.999.999/9999-99") } - { emp.razaoSocial }</option>
+                  <option key={emp.id} value={emp.id}>{ StringUtil.mask(emp.cnpj,"99.999.999/9999-99") } - { emp.razaoSocial }</option>
                 );
               })}
             </select>

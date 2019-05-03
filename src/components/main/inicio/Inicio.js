@@ -19,8 +19,6 @@ class Inicio extends Component {
                     <h4 className="card-title">ESCRITÓRIO VIRTUAL v2.0</h4>
                   </div>
                 </div>
-                <div className="form-group row">
-                </div>
               </div>
             </div>
           </div>

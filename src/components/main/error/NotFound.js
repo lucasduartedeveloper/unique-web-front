@@ -5,7 +5,7 @@ import UI from "../../../services/interface";
 
 class NotFound extends Component {
   componentDidMount() {
-    UI.alert(false, "Opa! Acho que você se perdeu.");
+    UI.alert(false, "Opa! Este recurso não existe.", "warning");
     this.props.history.push("/");
   }
   render() {

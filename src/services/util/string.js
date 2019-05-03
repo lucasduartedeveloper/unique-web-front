@@ -63,6 +63,40 @@ const StringUtil = {
       default:
         return "";
     }
+  },
+
+  faFileIcon(nome) {
+    let pos = nome.lastIndexOf(".");
+    let extensao = nome.substring(pos).toUpperCase();
+
+    switch (extensao) {
+      case ".PDF":
+        return "fa-file-pdf-o";
+      case ".JPG":
+        return "fa-file-image-o";
+      case ".PNG":
+        return "fa-file-image-o";
+      case ".BMP":
+          return "fa-file-image-o";
+      case ".XLS":
+        return "fa-file-excel-o";
+      case ".XLSX":
+        return "fa-file-excel-o";
+      case ".CSV":
+        return "fa-file-excel-o";
+      case ".DOC":
+        return "fa-file-word-o";
+      case ".DOCX":
+        return "fa-file-word-o";
+      case ".ZIP":
+        return "fa-file-zip-o";
+      case ".RAR":
+        return "fa-file-archive-o";
+      case ".7Z":
+        return "fa-file-archive-o";
+      default:
+        return "fa-file-o";
+    }
   }
 };
 

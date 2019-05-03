@@ -1,11 +1,11 @@
-table tr, table td {
+.table-doc tr, .table-doc td {
     border: 0px !important;
 }
 
-tr:hover {
+.table-doc tr:hover {
     background: #ccc;
 }
 
-td {
+.table-doc td {
     padding-top: 10px;
 }

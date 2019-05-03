@@ -1,36 +1,89 @@
+*:not(i){
+  font-family: 'Comfortaa', cursive !important;
+}
+
 .login-logo-container img {
   margin-bottom: 10px;
   width: 50%;
 }
 
 .auth.theme-one .auto-form-wrapper {
-  box-shadow: 0 -25px 37.7px 11.3px rgba(255, 255, 255, 0.1);
+  padding-top: 0px;
+  box-shadow: none !important;
+  background: rgba(0,0,0,0) !important;
+  border-radius: 25px !important;
 }
 
 .full-page-wrapper {
-  background: #201E31;
-}
-
-.auto-form-wrapper {
-  background: #F0F0F0 !important;
-  border-radius: 0px !important;
-}
-
-.btn, .form-control, .input-group-text {
-  border-radius: 0px !important;
+  background: #fff;
 }
 
 .btn-primary {
-  background: #201E31;
-  border-color: #201E31;
+  background: #4B488B;
+  border-color: #4B488B;
 }
 
 .btn-primary:hover {
-  background: #161427;
-  border-color: #161427;
+  background: rgb(47, 45, 87);
+  border-color: rgb(47, 45, 87);
 }
 
 .btn-primary:focus {
-  background: #161427 !important;
-  border-color: #161427 !important;
+  background: rgb(47, 45, 87) !important;
+  border-color: rgb(47, 45, 87) !important;
 }
+
+.login-logo-container {
+  text-align: center;
+}
+
+.logo-escritorio {
+  margin-top: 60px;
+}
+
+.logo-londrisoft {
+  height: 40px;
+}
+
+.logo-londrisoft img {
+  height: 100%;
+  width: auto;
+}
+
+.footer-text, .forgot-password {
+  color: #777 !important;
+}
+
+.wave {
+  background-image: url("/images/ondas.png");
+  width: 100%;
+  background-size: cover;
+  height: 400px;
+  background-position: bottom;
+  position: fixed;
+  bottom: 0px;
+}
+
+.wave.gray {
+  background-image: url("/images/onda-cinza.png");
+}
+
+@media only screen and (max-width: 768px) {
+  .wave {
+    display: none;
+  }
+  .logo-escritorio {
+    margin-top: 0px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .wave {
+    height: 210px;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .wave {
+    height: 275px;
+  }
+}
+

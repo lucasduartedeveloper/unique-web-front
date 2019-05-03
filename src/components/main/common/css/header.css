@@ -1,11 +1,25 @@
+.nav-link,
+.nav-link i{
+  color: rgb(130,166,191) !important;
+}
+
+.submenu {
+  background: rgb(37,68,89) !important;
+}
+
+.nav-bottom {
+  background: #07263b !important;
+}
+
 .profile-picture {
   display: inline-block;
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #1d994c;
+  background: #ccc;
   font-size: 16px;
-  color: rgb(255, 255, 255);
+  font-weight: 700;
+  color: #000;
   text-align: center;
   line-height: 34px;
 }
@@ -20,7 +34,7 @@
 }
 
 .navbar.horizontal-layout .nav-top {
-  background: #201E31;
+  background: #4B488B;
 }
 
 @media (min-width: 1400px) {

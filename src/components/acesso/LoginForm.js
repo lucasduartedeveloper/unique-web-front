@@ -44,6 +44,22 @@ class LoginForm extends Component {
   }
 
   render() {
+    let inputStyle = {
+      borderWidth: "1px 0px 1px 1px",
+      borderColor: "#4B488B",
+      borderRadius: "26px 0px 0px 26px",
+      fontSize: "16px"
+    }
+    let appendStyle = {
+      borderWidth: "1px 1px 1px 1px",
+      borderColor: "#4B488B",
+      borderRadius: "0px 26px 26px 0px"
+    }
+    let buttonStyle = {
+      borderRadius: "26px",
+      fontSize: "26px"
+    }
+
     return (
       <form onSubmit={this.handleSubmit} autoComplete="off" spellCheck="false">
         <div className="form-group">
@@ -57,9 +73,11 @@ class LoginForm extends Component {
               onChange={this.handleChange}
               autoFocus
               value={this.state.login}
+              style={inputStyle}
             />
             <div className="input-group-append">
-              <span className="input-group-text">
+              <span className="input-group-text"
+              style={appendStyle}>
                 <i className="icon-user" />
               </span>
             </div>
@@ -74,16 +92,18 @@ class LoginForm extends Component {
               className="form-control"
               placeholder="Digite sua senha"
               onChange={this.handleChange}
+              style={inputStyle}
             />
             <div className="input-group-append">
-              <span className="input-group-text">
+              <span className="input-group-text"
+              style={appendStyle}>
                 <i className="icon-key" />
               </span>
             </div>
           </div>
         </div>
         <div className="form-group">
-          <button className="btn btn-primary submit-btn btn-block">
+          <button style={buttonStyle} className="btn btn-primary submit-btn btn-block">
             Entrar
           </button>
         </div>
