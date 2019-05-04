@@ -87,3 +87,17 @@
   }
 }
 
+#logo-escritorio {
+  animation-name: bounceInUp;
+  animation-duration: 1s;
+}
+
+#input-login {
+  animation-name: bounceInLeft;
+  animation-duration: 1s;
+}
+
+#input-senha {
+  animation-name: bounceInRight;
+  animation-duration: 1s;
+}

@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { withRouter } from 'react-router-dom';
 import InputMask from "react-input-mask";
 
-import UI from "../../../services/interface";
-import StringUtil from "../../../services/util/string";
-import DataUtil from "../../../services/util/datahora";
-import API from "../../../services/api";
+import UI from "../../../../services/interface";
+import StringUtil from "../../../../services/util/string";
+import DataUtil from "../../../../services/util/datahora";
+import API from "../../../../services/api";
 
-class FuncionarioNovo extends Component {
+class FuncionarioEditar extends Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -79,7 +79,7 @@ class FuncionarioNovo extends Component {
               <div className="card-body">
                 <div className="form-group row">
                   <div className="col-md-4">
-                    <h4 className="card-title">NOVO COLABORADOR</h4>
+                    <h4 className="card-title">[ NOME DO COLABORADOR ]</h4>
                   </div>
                   </div>
                   <div className="form-group row">
@@ -129,4 +129,4 @@ class FuncionarioNovo extends Component {
   }
 }
 
-export default withRouter(FuncionarioNovo);
+export default withRouter(FuncionarioEditar);

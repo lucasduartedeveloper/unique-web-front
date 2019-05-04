@@ -1,0 +1,67 @@
+.tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.animate-once {
+    animation-name: bounceIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1
+}
+
+.a05s {
+    animation-duration: 0.5s;
+}
+
+.a15s {
+    animation-duration: 1.5s;
+}
+
+.tile {
+    width: 220px;
+    height: 220px;
+    background: rgb(93,120,156);
+    color: #fff;
+    margin: 5px;
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.tile span {
+    position: relative;
+    bottom: 0px;
+    display: block;
+    margin-top: 10px;
+}
+
+.tile i {
+    font-size: 80px;
+    margin-top: 30px;
+}
+
+.tile img {
+    height: 110px;
+}
+
+.tile:hover {
+    background: rgb(83,110,146);
+    animation-name: pulse;
+    animation-duration: 1s;
+}
+
+@media only screen and (max-width: 1400px) {
+    .tile {
+        width: 180px;
+        height: 180px;
+    }
+    .tile i {
+        font-size: 80px;
+        margin-top: 20px;
+    }
+    .tile img {
+        height: 100px;
+    }
+}

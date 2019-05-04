@@ -62,7 +62,7 @@ class LoginForm extends Component {
 
     return (
       <form onSubmit={this.handleSubmit} autoComplete="off" spellCheck="false">
-        <div className="form-group">
+        <div id="input-login" className="form-group">
           <label className="label">E-mail</label>
           <div className="input-group">
             <input
@@ -83,7 +83,7 @@ class LoginForm extends Component {
             </div>
           </div>
         </div>
-        <div className="form-group">
+        <div id="input-senha" className="form-group">
           <label className="label">Senha</label>
           <div className="input-group">
             <input

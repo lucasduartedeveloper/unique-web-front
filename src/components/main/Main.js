@@ -6,6 +6,7 @@ import Footer from "./common/Footer";
 
 import Inicio from "./inicio/Inicio";
 import FuncionarioNovo from "./funcionario/FuncionarioNovo";
+import FuncionarioEditar from "./funcionario/completo/FuncionarioEditar";
 import FuncionarioPesquisa from "./funcionario/FuncionarioPesquisa";
 import Documento from "./documento/Documento";
 
@@ -22,13 +23,13 @@ class Main extends Component {
               <Switch>
                 <Route exact path="/" component={Inicio} />
                 <Route exact path="/inicio" component={Inicio} />
+                <Route exact path="/folha/funcionario/editar/:id" component={FuncionarioEditar} />
                 <Route exact path="/folha/funcionario/novo" component={FuncionarioNovo} />
                 <Route exact path="/folha/funcionario/pesquisa" component={FuncionarioPesquisa} />
                 <Route exact path="/documento" component={Documento} />
                 <Route path="/" component={NotFound} />
               </Switch>
             </div>
-            { /* <div className="wave gray"></div> */ }
             <Footer />
           </div>
         </div>

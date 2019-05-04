@@ -42,7 +42,25 @@ class Documento extends Component {
   }
 
   criarMapa(documentos) {
-    let mapa = [];
+    let mapa = [{
+      nome: "FOLHA",
+      diretorio: "\\FOLHA",
+      diretorioPai: "\\",
+      quantidade: 0,
+      padrao: true
+    },{
+      nome: "CONTABIL",
+      diretorio: "\\CONTABIL",
+      diretorioPai: "\\",
+      quantidade: 0,
+      padrao: true
+    },{
+      nome: "FISCAL",
+      diretorio: "\\FISCAL",
+      diretorioPai: "\\",
+      quantidade: 0,
+      padrao: true
+    }];
 
     documentos.map(function(doc) {
       doc.diretorio = doc.diretorio.toUpperCase();
@@ -162,14 +180,14 @@ class Documento extends Component {
   }
 
   removerDocumento(doc) {
-    UI.loader("show", "Excluindo arquivo...");
     UI.confirm("Atenção", "Tem certeza que deseja apagar este arquivo?")
       .then((value) => {
         if (value) {
+          UI.loader("show", "Excluindo arquivo...");
           API.delete("/documentos/" + doc.id)
           .then((json) => {
-            this.state.documentos.pop(doc);
-            this.forceUpdate();
+            let docs = this.state.documentos.filter((obj, i) => { return obj.id != doc.id; });
+            this.setState({ documentos: docs });
             UI.alert(true, json.message);
             UI.loader("hide");
           })
@@ -178,11 +196,7 @@ class Documento extends Component {
             UI.loader("hide");
           })
         }
-        else {
-          UI.loader("hide");
-        }
       });
-
   }
 
   render() {
@@ -202,7 +216,6 @@ class Documento extends Component {
               <div className="row">
                 <div className="col-md-6" style={{ cursor: "pointer" }} onClick={ () => { mudarDiretorio(local.diretorioPai)} }>
                     <h4 className="card-title"><i style={{ color: "#201E31"}} className="fa fa-folder-open fa-2x"></i>&nbsp;{ local.diretorio }</h4>
-                    
                   </div>
                   <div className="col-md-6 text-right">
                   <input id="documento-file" type="file" name="file" className="file-upload-default" style={{ display: "none" }} onChange={this.arquivoChange} />
@@ -233,7 +246,7 @@ class Documento extends Component {
                           function(item, i) {
                             return (
                             <tr key={"d_" + i} style={{ cursor: "pointer" }}> 
-                              <td style={{ width: "1%" }}>&nbsp;<i className="fa fa-folder fa-2x" style={{ color: "#201E31"}}></i></td>
+                              <td style={{ width: "1%" }}>&nbsp;<i className="fa fa-folder fa-2x" style={{ color: item.padrao ? "#201E31" : "#6c6c6c" }}></i></td>
                               <td onClick={ () => mudarDiretorio(item.diretorio) }>{ item.nome }</td>
                               <td></td>
                               <td></td>

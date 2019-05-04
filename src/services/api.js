@@ -3,7 +3,8 @@ const API = {
   usuario: null,
   empresas: null,
 
-  baseUrl: "http://teste-londrisoft.orienta.com.br:5000/api",
+  //baseUrl: "http://teste-londrisoft.orienta.com.br:5000/api",
+  baseUrl: "http://192.168.0.179:5000/api",
 
   setAccessToken: function (token) {
     localStorage.setItem("accessToken", token);

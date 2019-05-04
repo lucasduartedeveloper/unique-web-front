@@ -17,7 +17,7 @@ class Login extends Component {
             <div className="row w-100 mx-auto">
               <div className="col-lg-4 mx-auto">
                 <div className="login-logo-container logo-escritorio">
-                  <img src="/images/login-logo.png" alt="" />
+                  <img src="/images/login-logo.png" alt="" id="logo-escritorio" />
                 </div>
                 <div className="auto-form-wrapper">
                   <LoginForm />

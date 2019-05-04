@@ -97,7 +97,7 @@ const DataUtil = {
         return false;
       }
     }
-    return true; // data esta correta
+    return (ano >= 1900 && ano <= parseInt(this.hoje().substring(7, 10))); // data esta correta
   },
 
   validarHora: function (hora) {

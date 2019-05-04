@@ -1,29 +1,51 @@
 import React, { Component } from "react";
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
+
+import "./css/inicio.css";
 
 class Inicio extends Component {
   render() {
     return (
-      <form
-        className="form-sample"
-        autoComplete="off"
-        spellCheck="false"
-        onSubmit={this.handleSubmit}
-      >
-        <div className="row">
-          <div className="col-12 grid-margin">
-            <div className="card">
-              <div className="card-body">
-                <div className="form-group row">
-                  <div className="col-md-4">
-                    <h4 className="card-title">ESCRITÓRIO VIRTUAL v2.0</h4>
-                  </div>
+      <div className="row">
+        <div className="col-12 grid-margin">
+          <div className="tile-container">
+            <div className="animate-once">
+              <Link to="/folha/funcionario/pesquisa">
+                <div className="tile text-center">
+                  <i className="fa fa-users"></i>
+                  <span>Colaboradores</span>
                 </div>
+              </Link>
+            </div>
+            <div className="animate-once a05s">
+              <div className="tile text-center">
+                <img src="/images/icons/money-bag-128.png" alt="" />
+                <span>Folha</span>
               </div>
+            </div>
+            <div className="animate-once">
+              <div className="tile text-center">
+                <img src="/images/icons/beach-128.png" alt="" />
+                <span>Férias</span>
+              </div>
+            </div>
+            <div className="animate-once a15s">
+              <div className="tile text-center">
+                <i className="fa fa-legal"></i>
+                <span>Rescisão</span>
+              </div>
+            </div>
+            <div className="animate-once a05s">
+            <Link to="/documento">
+              <div className="tile text-center">
+                <i className="fa fa-hdd-o"></i>
+                <span>Documentos</span>
+              </div>
+            </Link>
             </div>
           </div>
         </div>
-      </form>
+      </div>
     );
   }
 }

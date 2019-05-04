@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import UI from "../../../services/interface";
 import API from "../../../services/api";
@@ -40,18 +40,22 @@ class FuncionarioPesquisa extends Component {
   }
 
   removerFuncionario(func) {
-    UI.loader("show", "Removendo funcionario...");
-    API.delete("/funcionarios/" + func.id)
-    .then((json) => {
-      this.state.funcionarios.pop(func);
-      this.forceUpdate();
-      console.log(json);
-      UI.loader("hide");
-      UI.alert(json.success, json.message);
-    })
-    .catch((json) => {
-      UI.loader("hide");
-      UI.alert(false, json.message);
+    UI.confirm("Atenção", "Tem certeza que deseja excluir o colaborador " + func.nome + "?")
+    .then((value) => {
+      if (value) {
+        UI.loader("show", "Removendo funcionario...");
+        API.delete("/funcionarios/" + func.id)
+        .then((json) => {
+          this.state.funcionarios.pop(func);
+          this.forceUpdate();
+          UI.loader("hide");
+          UI.alert(json.success, json.message);
+        })
+        .catch((json) => {
+          UI.loader("hide");
+          UI.alert(false, json.message);
+        })
+      }
     })
   }
 
@@ -69,7 +73,7 @@ class FuncionarioPesquisa extends Component {
               <div className="card-body">
                 <div className="form-group row">
                   <div className="col-md-12">
-                    <h4 className="card-title">PESQUISAR FUNCIONÁRIO</h4>
+                    <h4 className="card-title">PESQUISAR COLABORADOR</h4>
                       <input
                         placeholder="Digite alguma informação do funcionário ou deixe em branco para ver todos..."
                         name="texto"
@@ -110,7 +114,7 @@ class FuncionarioPesquisa extends Component {
                                 <i className="fa fa-gear"></i>
                               </button>
                               <div className="dropdown-menu" aria-labelledby="dropdown1">
-                                <span className="dropdown-item"><i className="fa fa-edit"></i>&nbsp;Editar</span>
+                                <Link to={"/folha/funcionario/editar/" + func.id} className="dropdown-item"><i className="fa fa-edit"></i>&nbsp;Editar</Link>
                                 <span onClick={ () => this.removerFuncionario(func) } className="dropdown-item"><i className="fa fa-times"></i>&nbsp;Excluir</span>
                               </div>
                             </td>

@@ -100,12 +100,12 @@ class Header extends Component {
                   <ul className="submenu-item">
                     <li className="nav-item">
                       <Link className="nav-link" to="/folha/funcionario/novo">
-                        Novo Funcionário
+                        Novo Colaborador
                       </Link>
                     </li>
                     <li className="nav-item">
                       <Link className="nav-link" to="/folha/funcionario/pesquisa">
-                        Pesquisar Funcionário
+                        Pesquisar Colaborador
                       </Link>
                     </li>
                     <li className="nav-item">
@@ -128,7 +128,7 @@ class Header extends Component {
               </li>
               <li className="nav-item">
                 <Link to="/documento" className="nav-link">
-                  <i className="link-icon icon-docs" />
+                  <i className="link-icon fa fa-hdd-o" />
                   <span className="menu-title">Documentos</span>
                 </Link>
               </li>
