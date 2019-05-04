@@ -186,7 +186,7 @@ class Documento extends Component {
           UI.loader("show", "Excluindo arquivo...");
           API.delete("/documentos/" + doc.id)
           .then((json) => {
-            let docs = this.state.documentos.filter((obj, i) => { return obj.id != doc.id; });
+            let docs = this.state.documentos.filter((obj, i) => { return obj.id !== doc.id; });
             this.setState({ documentos: docs });
             UI.alert(true, json.message);
             UI.loader("hide");

@@ -97,6 +97,7 @@ const DataUtil = {
         return false;
       }
     }
+    
     return (ano >= 1900 && ano <= parseInt(this.hoje().substring(7, 10))); // data esta correta
   },
 
